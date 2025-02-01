@@ -9,7 +9,7 @@ with open("master.json", "r") as file:
 
 # Get the word from the URL query
 form = cgi.FieldStorage()
-word = form.getfirst("word")
+word = form.getvalue("word")
 
 # Search for the word in word lists
 word_details = None
@@ -23,11 +23,13 @@ print("Content-type: text/html\n")
 
 # If word is found, generate HTML
 if word_details:
-    print(f"""
+    print(f'''
     <!DOCTYPE html>
     <html>
     <head>
         <title>Goofy Ahhh Dictionary | {word}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <h1>DICTIONARY</h1>
@@ -39,6 +41,6 @@ if word_details:
         <a href="index.html">Home</a>
     </body>
     </html>
-    """)
+    ''')
 else:
     print("<h1>Word not found!</h1><a href='index.html'>Back</a>")
