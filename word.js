@@ -27,4 +27,4 @@ fetch("master.json")
             document.body.innerHTML = "<h1>Word not found!</h1><a href='index.html'>Back</a>";
         }
     })
-    .catch(error => console.error("Error loading word:", error));
+    // .catch(error => console.error("Error loading word:", error));
