@@ -8,13 +8,20 @@
     <body>
         <h1><b>Goofy ahh dictionary</b></h1>
         <ul>
-            <li><a href="loquacious.html"><h3>Loquacious</h1></a></li>
-            <li><a href="malady.html"><h3>maLaDy</h1></a></li>
-            <li><a href="gossamer.html"><h3>Gossamer</h1></a></li>
-            <li><a href="petulant.html"><h3>Petulant</h1></a></li>
-            <li><a href="feisty.html"><h3>Feisty</h1></a></li>
-            <li><a href="../generate.py?word=melancholy"><h3>Melancholy</h1></a></li>
-            <li><a href="../generate.py?word=prodigious"><h3>Prodigious</h3></a></li>
+            <script>
+                // Load the word list dynamically
+                fetch("../master.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        const wordList = document.getElementById("wordList");
+                        for (let word in data) {
+                            let listItem = document.createElement("li");
+                            listItem.innerHTML = `<a href="template.html?word=${word}"><h3>${word}</h3></a>`;
+                            wordList.appendChild(listItem);
+                        }
+                    })
+                    .catch(error => console.error("Error loading words:", error));
+            </script>
         </ul>
     </body>
 </html>
