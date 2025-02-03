@@ -16,9 +16,9 @@ fetch("master.json")
         if (typeof wordData !== "undefined") {
             console.log(word)
             document.getElementById("word").textContent = word;
-            document.getElementById("pos").textContent = `(${word.part_of_speech})`;
-            document.getElementById("definition").textContent = `${word.definition}`;
-            document.getElementById("sentence").textContent = `${word.used_in_sentence}`;
+            document.getElementById("pos").textContent = `(${data[list][word].part_of_speech})`;
+            document.getElementById("definition").textContent = `${data[list][word].definition}`;
+            document.getElementById("sentence").textContent = `${data[list][word].used_in_sentence}`;
 
             // Dynamically set image
             let img = document.getElementById("wordImage");
