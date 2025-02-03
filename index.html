@@ -10,7 +10,7 @@
         <ul>
             <script>
                 // Load the word list dynamically
-                fetch("../master.json")
+                fetch("master.json")
                     .then(response => response.json())
                     .then(data => {
                         const wordList = document.getElementById("wordList");
