@@ -160,6 +160,13 @@ const dictionary = [{
     
 ];
 
+function loadStylesheet() {
+    let link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "styles.css";
+    document.head.appendChild(link);
+}
+
 function generateDictionary() {
     let container = document.getElementById("dictionary");
     
@@ -175,4 +182,7 @@ function generateDictionary() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", generateDictionary);
+document.addEventListener("DOMContentLoaded", () => {
+    loadStylesheet();
+    generateDictionary();
+});
