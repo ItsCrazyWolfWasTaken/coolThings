@@ -6,19 +6,21 @@ function fetchDictionary() {
 }
 
 function generateDropdowns(dictionary) {
-    let container = document.getElementById("dictionary");
+    const container = document.getElementById("dictionary");
     container.innerHTML = "";
     
-    Object.keys(dictionary).forEach(listName => {
-        let details = document.createElement("details");
-        let summary = document.createElement("summary");
+    // biome-ignore lint/complexity/noForEach: <explanation>
+        Object.keys(dictionary).forEach(listName => {
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
         summary.textContent = listName.replace('_', ' ').toUpperCase();
         details.appendChild(summary);
 
-        let ul = document.createElement("ul");
+        const ul = document.createElement("ul");
         
-        Object.keys(dictionary[listName]).forEach(word => {
-            let li = document.createElement("li");
+        // biome-ignore lint/complexity/noForEach: <explanation>
+                Object.keys(dictionary[listName]).forEach(word => {
+            const li = document.createElement("li");
             li.innerHTML = `<b>${word}</b> (${dictionary[listName][word].part_of_speech}): ${dictionary[listName][word].definition}<br><i>${dictionary[listName][word].used_in_sentence}</i>`;
             ul.appendChild(li);
         });
@@ -30,17 +32,18 @@ function generateDropdowns(dictionary) {
 
 document.addEventListener("DOMContentLoaded", fetchDictionary);
 function loadStylesheet() {
-    let link = document.createElement("link");
+    const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = "styles.css";
     document.head.appendChild(link);
 }
 
 function generateDictionary() {
-    let container = document.getElementById("dictionary");
+    const container = document.getElementById("dictionary");
     
-    dictionary.forEach(entry => {
-        let entryHtml = `
+    // biome-ignore lint/complexity/noForEach: <explanation>
+        dictionary.forEach(entry => {
+        const entryHtml = `
             <h3><b><i>${entry.word}</i></b> (${entry.partOfSpeech})</h3>
             <ol>
                 ${entry.definitions.map(def => `<li>${def}</li>`).join('')}
