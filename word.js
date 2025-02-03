@@ -8,11 +8,11 @@ fetch("master.json")
         let pos = null;
         let def = null;
         let sentence = null;
-        console.log(data.word["part_of_speech"]);
-        console.log(data.word["definition"]);
-        console.log(data.word["used_in_sentence"]);
+        console.log(data[word]["part_of_speech"]);
+        console.log(data[word]["definition"]);
+        console.log(data[word]["used_in_sentence"]);
 
-        if (typeof wordData !== "undefined") {
+        if (typeof data[word] !== "undefined") {
             console.log(word)
             document.getElementById("word").textContent = word;
             document.getElementById("pos").textContent = `(${pos})`;
