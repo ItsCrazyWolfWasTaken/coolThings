@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const word = params.get("word");
 
-fetch("words.json")
+fetch("master.json")
     .then(response => response.json())
     .then(data => {
         let wordData = null;
