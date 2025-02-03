@@ -2,6 +2,7 @@ const params = new URLSearchParams(window.location.search);
 const word = params.get("word");
 
 fetch("master.json")
+print("pass")
     .then(response => response.json())
     .then(data => {
         let wordData = null;
