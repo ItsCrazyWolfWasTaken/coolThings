@@ -8,9 +8,9 @@ fetch("master.json")
         let pos = null;
         let def = null;
         let sentence = null;
-        console.log(data[word]["part_of_speech"]);
-        console.log(data[word]["definition"]);
-        console.log(data[word]["used_in_sentence"]);
+        pos = data[word]["part_of_speech"];
+        def = data[word]["definition"];
+        sentence = data[word]["used_in_sentence"];
 
         if (typeof data[word] !== "undefined") {
             console.log(word)
