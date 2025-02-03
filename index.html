@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1><b>Goofy ahh dictionary</b></h1>
-        <ul>
+        <ul id="wordList"></ul>
             <script>
                 // Load the word list dynamically
                 fetch("master.json")
@@ -22,6 +22,5 @@
                     })
                     .catch(error => console.error("Error loading words:", error));
             </script>
-        </ul>
     </body>
 </html>
