@@ -1,5 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const word = params.get("word");
+console.log(word)
 
 fetch("master.json")
     .then(response => response.json())
