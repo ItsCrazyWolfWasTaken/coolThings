@@ -14,7 +14,7 @@ fetch("master.json")
         }
 
         if (typeof wordData !== "undefined") {
-            console.log(wordData)
+            console.log(word)
             document.getElementById("word").textContent = word;
             document.getElementById("pos").textContent = `(${wordData["part_of_speech"]})`;
             document.getElementById("definition").textContent = `${wordData["definition"]}`;
