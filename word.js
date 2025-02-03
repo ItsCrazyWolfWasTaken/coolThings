@@ -15,7 +15,7 @@ fetch("master.json")
 
         if (wordData) {
             document.getElementById("word").textContent = word;
-            document.getElementById("pos").textContent = wordData.part_of_speech};
+            document.getElementById("pos").textContent = wordData.part_of_speech;
             document.getElementById("definition").textContent = wordData.definition;
             document.getElementById("sentence").textContent = wordData.used_in_sentence;
 
@@ -23,7 +23,7 @@ fetch("master.json")
             let img = document.getElementById("wordImage");
             img.src = `Photos/${word}.png`; // Assumes images are named exactly like words
             img.style.display = "block"; // Show image if found
-        } else {
+        } else{
             document.body.innerHTML = "<h1>Word not found!</h1><a href='index.html'>Back</a>";
         }
     })
