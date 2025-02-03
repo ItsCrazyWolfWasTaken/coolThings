@@ -13,7 +13,7 @@ fetch("master.json")
             }
         }
 
-        if (wordData) {
+        if (typeof wordData !== "undefined") {
             document.getElementById("word").textContent = word;
             document.getElementById("pos").textContent = wordData.part_of_speech;
             document.getElementById("definition").textContent = wordData.definition;
