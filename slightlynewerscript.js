@@ -8,7 +8,7 @@ if (word) {
         .then(data => {
             if (data[word]) {
                 document.getElementById("word").textContent = word;
-                document.getElementById("partos").textContent = data[word].part_of_speech;
+                document.getElementById("pos").textContent = data[word].part_of_speech;
                 document.getElementById("definition").textContent = data[word].definition;
                 document.getElementById("sentence").textContent = data[word].used_in_sentence;
             } else {
