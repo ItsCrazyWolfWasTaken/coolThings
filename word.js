@@ -4,20 +4,12 @@ const word = params.get("word");
 fetch("master.json")
     .then(response => response.json())
     .then(data => {
-        let wordData = null;
         let pos = null;
         let def = null;
         let sentence = null;
-
-        for (const list in data) {
-            if (data[list][word]) {
-                wordData = data[list][word];
-                pos = data[list][word].part_of_speech;
-                def = data[list][word].definition;
-                sentence = data[list][word].used_in_sentence;
-                break;
-            }
-        }
+        pos = data.word.part_of_speech;
+        def = data.word.definition;
+        sentence = data.word.used_in_sentence;
 
         if (typeof wordData !== "undefined") {
             console.log(word)
