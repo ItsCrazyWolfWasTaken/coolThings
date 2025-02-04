@@ -148,5 +148,35 @@
     "part_of_speech": "v",
     "definition": "to continue despite difficulties",
     "used_in_sentence": "Despite the rainy weather and difficult terrain, the hikers decided to persevere and reach the mountain summit."
+    },
+    "eschew": {
+        "part_of_speech": "v",
+        "definition": "to avoid habitually",
+        "used_in_sentence": "After his doctor&#39;s stern warning, James decided to eschew sugary drinks and switched to water instead."
+    },
+    "frugal": {
+        "part_of_speech": "adj",
+        "definition": "sparing or economical",
+        "used_in_sentence": "Being frugal with her savings allowed Maria to eventually buy her dream house despite her modest income."
+    },
+    "obfuscate": {
+        "part_of_speech": "v",
+        "definition": "to make obscure or confused",
+        "used_in_sentence": "The politician tried to obfuscate the truth by using complex jargon and vague statements."
+    },
+    "propensity": {
+        "part_of_speech": "n",
+        "definition": "an intense natural inclination or preference",
+        "used_in_sentence": "Sarah&#39;s propensity for solving puzzles led her to become a successful CIA codebreaker."
+    },
+    "venerate": {
+        "part_of_speech": "v",
+        "definition": "to regard with reverent respect",
+        "used_in_sentence": "The students venerate their elderly history teacher, who survived World War II and shares firsthand accounts of the era."
+    },
+    "feisty": {
+        "part_of_speech": "adj",
+        "definition": "having a lively aggressiveness",
+        "used_in_sentence": "The feisty chihuahua wasn't afraid to stand up to dogs three times its size."
     }
 }
